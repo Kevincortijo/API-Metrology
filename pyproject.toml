@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "api-metrology"
+version = "0.1.0"
+description = "part of the project aimed at the metrology sector of the company LG"
+authors = ["Joel Junior <joelrool.junior@lgepartner.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = {extras = ["standard"], version = "^0.116.1"}
+sqlalchemy = "^2.0.41"
+black = "^25.1.0"
+
+[tool.black]
+line-length = 88
+target-version = ["py38"]
+skip-string-normalization = false
+skip-magic-trailing-comma = false
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
