@@ -5,7 +5,7 @@ from typing import List, Optional
 
 
 class Items(Base):
-    __tablename__ = "itens"
+    __tablename__ = "item"
     id: Mapped[int] = mapped_column(primary_key=True, index=True)
 
     name: Mapped[str]
