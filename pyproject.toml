@@ -9,9 +9,11 @@ readme = "README.md"
 python = "^3.12"
 fastapi = {extras = ["standard"], version = "^0.116.1"}
 sqlalchemy = "^2.0.41"
-black = "^25.1.0"
 
-[tool.black]
+[tool.poetry.group.dev.dependencies]
+blue = "^0.9.1"
+
+[tool.blue]
 line-length = 88
 target-version = ["py38"]
 skip-string-normalization = false

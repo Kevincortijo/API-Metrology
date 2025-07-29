@@ -16,4 +16,11 @@ class Items(Base):
     descripition: Mapped[str]
 
     def __repr__(self) -> str:
-        return f"Item(name={self.name},code={self.code},quantity={self.quantity},supplier={self.supplier},unit_price={self.unit_price},descripition={self.descripition})"
+        return (
+            f'Item(name={self.name}, '
+            f'code={self.code}, '
+            f'quantity={self.quantity}, '
+            f'supplier={self.supplier}, '
+            f'unit_price={self.unit_price}, '
+            f'descripition={self.descripition}'
+        )
