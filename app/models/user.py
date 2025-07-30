@@ -4,7 +4,7 @@ from typing import List, Optional
 from sqlalchemy import ForeignKey
 
 class User(Base):
-    __tablename__='user'
+    __tablename__ = 'user'
     id:Mapped[int] = mapped_column(primary_key=True, index=True)
 
     name:Mapped[str]

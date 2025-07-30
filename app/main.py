@@ -1,10 +1,10 @@
 from app.db.database_config import Base, engine
-from app.service import user
+from app.api.user_routes import router as user_router
 
 from fastapi import FastAPI
 
+app = FastAPI(title='API Metrologia')
 Base.metadata.create_all(engine)
 
-app = FastAPI()
+app.include_router(user_router)
 
-app.include_router(user.router)
