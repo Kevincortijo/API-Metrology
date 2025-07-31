@@ -6,7 +6,7 @@ from sqlalchemy.orm import Mapped, mapped_column, relationship
 from app.db.database_config import Base
 
 
-class Items(Base):
+class Item(Base):
     __tablename__ = "item"
     id: Mapped[int] = mapped_column(primary_key=True, index=True)
 
