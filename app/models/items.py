@@ -1,7 +1,9 @@
-from app.db.database_config import Base
-from sqlalchemy.orm import Mapped, mapped_column, relationship
-from sqlalchemy import ForeignKey
 from typing import List, Optional
+
+from sqlalchemy import ForeignKey
+from sqlalchemy.orm import Mapped, mapped_column, relationship
+
+from app.db.database_config import Base
 
 
 class Items(Base):

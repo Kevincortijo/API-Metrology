@@ -1,8 +1,8 @@
 from fastapi import APIRouter, Depends, HTTPException
 
+from app.db.database_config import Session, get_db
 from app.schemas.user import *
 from app.service.user_service import *
-from app.db.database_config import get_db, Session
 
 router = APIRouter(prefix='/user', tags=['User'])
 
