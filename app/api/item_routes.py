@@ -4,7 +4,7 @@ from app.db.database_config import Session, get_db
 from app.schemas.items import *
 from app.service.items_service import *
 
-router = APIRouter('/items', tags=['Item'])
+router = APIRouter(prefix='/items', tags=['Item'])
 
 @router.post('/register', response_model=ItemRead, status_code=200)
 def register_new_item(item: ItemCreate, db:Session = Depends(get_db)):
