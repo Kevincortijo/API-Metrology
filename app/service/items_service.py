@@ -23,8 +23,8 @@ def update_item(db:Session, item_id:int, item_data:ItemUpdate):
         for fields, value in item_data.model_dump(exclude_unset=True).items():
             setattr(item, fields, value)
         db.commit()
-        db.refresh()
-        return item
+        db.refresh(item)
+    return item
 
 def delete_item(db: Session, item_id: int):
     item = get_item(db, item_id)
