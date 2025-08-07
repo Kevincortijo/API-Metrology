@@ -11,6 +11,7 @@ class User(Base):
     id:Mapped[int] = mapped_column(primary_key=True, index=True)
 
     name:Mapped[str]
+    email:Mapped[str]
     sector:Mapped[str]
     registration:Mapped[str]
     rfid_code:Mapped[str]
@@ -18,6 +19,7 @@ class User(Base):
     def __repr__(self) -> str:
         return (
             f'User(name={self.name}, '
+            f'User(name={self.email}, '
             f'sector={self.sector}, '
             f'registration={self.registration}, '
             f'rfid_code={self.rfid_code}'
