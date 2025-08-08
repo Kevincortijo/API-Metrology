@@ -14,6 +14,7 @@ class Item(Base):
     code: Mapped[str]
     quantity: Mapped[int]
     supplier: Mapped[str]
+    manufacturer: Mapped[str]
     unit_price: Mapped[float]
     descripition: Mapped[str]
 

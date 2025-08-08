@@ -8,6 +8,7 @@ class ItemBase(BaseModel):
     code:str
     quantity:int
     supplier:str
+    manufacturer:str
     unit_price:float
     descripition:str    
 
@@ -24,5 +25,6 @@ class ItemUpdate(ItemBase):
     code:Optional[str] = None
     quantity:Optional[int] = None
     supplier:Optional[str] = None
+    manufacturer:Optional[str] = None
     unit_price:Optional[float] = None
     descripition:Optional[str] = None    
